@@ -1,19 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react()],
   server: {
     host: "127.0.0.1",
     port: 4173,
     strictPort: false,
     watch: {
-      ignored: [
-        "**/public/**",
-        "**/node_modules/**",
-        "**/.git/**",
-      ],
+      ignored: ["**/public/**", "**/node_modules/**", "**/.git/**"],
     },
   },
 });
